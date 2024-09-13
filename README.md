@@ -88,6 +88,7 @@ This feature allows you to create interactive comparison sliders, where an eleme
 
 #### How to Use
 
+Syncs the value of a slider with the width of an Element in %
 To implement a before-and-after style slider:
 
 1. Add a `data-before-after="wrapper"` to the container element.
@@ -100,9 +101,9 @@ The width of the element with `data-before-after="before"` will be adjusted base
 #### Example
 
 <div data-before-after="wrapper">
-    <div data-before-after="before" style="background-color: lightblue;">
+    <img data-before-after="before" style="background-color: lightblue;" src="">
         <!-- Before content -->
-    </div>
+    </img>
     <input type="range" data-before-after="slider" min="0" max="100" value="50">
 </div>
 
