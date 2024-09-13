@@ -81,12 +81,6 @@ Automatically sets the current year for elements with the `footer-date` attribut
 ### Lenis Smooth Scrolling
 Smooth scrolling functionality is added via the Lenis library. This improves the overall UX of your page, providing a more fluid scrolling experience.
 
-## How to Use
-
-1. Include this JavaScript in your project.
-2. Add the appropriate custom attributes to your HTML elements as needed.
-3. Enjoy the enhanced functionality!
-
 
 ### Slider with `data-before-after`
 
@@ -115,3 +109,10 @@ The width of the element with `data-before-after="before"` will be adjusted base
 #### JavaScript
 
 The library will automatically search for all `data-before-after="wrapper"` elements and link the `before` element’s width to the `slider` value. The width is updated in percentage as the slider is moved.
+
+
+# How to Use
+
+1. Include this JavaScript in your project.
+2. Add the appropriate custom attributes to your HTML elements as needed.
+3. Enjoy the enhanced functionality!
