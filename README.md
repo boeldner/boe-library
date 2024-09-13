@@ -87,3 +87,31 @@ Smooth scrolling functionality is added via the Lenis library. This improves the
 2. Add the appropriate custom attributes to your HTML elements as needed.
 3. Enjoy the enhanced functionality!
 
+
+### Slider with `data-before-after`
+
+This feature allows you to create interactive comparison sliders, where an element's width can be adjusted based on a slider input. The `data-before-after` attributes help control the elements within the wrapper.
+
+#### How to Use
+
+To implement a before-and-after style slider:
+
+1. Add a `data-before-after="wrapper"` to the container element.
+2. Inside the wrapper, add:
+   - An element with `data-before-after="before"` for the "before" section.
+   - An `<input>` element with `data-before-after="slider"` for controlling the width.
+
+The width of the element with `data-before-after="before"` will be adjusted based on the slider’s value.
+
+#### Example
+
+<div data-before-after="wrapper">
+    <div data-before-after="before" style="background-color: lightblue;">
+        <!-- Before content -->
+    </div>
+    <input type="range" data-before-after="slider" min="0" max="100" value="50">
+</div>
+
+#### JavaScript
+
+The library will automatically search for all `data-before-after="wrapper"` elements and link the `before` element’s width to the `slider` value. The width is updated in percentage as the slider is moved.
