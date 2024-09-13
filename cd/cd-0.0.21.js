@@ -45,6 +45,7 @@ const logger = {
     }
 };
 
+
 (function() {
     logger.log("Code before DOM is loaded");
 })();
