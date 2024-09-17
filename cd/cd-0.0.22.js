@@ -29,11 +29,12 @@ function createStyleTag() {
       .fs-cc-prefs_title, .fs-cc-prefs_label{
       color: black;  
       } 
-@media screen and (max-width: 991px) {
-    .other-material-input {
-        width: 100%;
-        height: 0px;
-    }
+    @media screen and (max-width: 1024px) {
+        .other-material-input {
+            width: 100%;
+            height: auto;
+        }
+}
 }
     `;
     const style = document.createElement('style');
