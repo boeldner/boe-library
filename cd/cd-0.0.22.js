@@ -34,6 +34,12 @@ function createStyleTag() {
             width: 100%;
             height: auto;
         }
+    }
+    @media screen and (max-width: 990px) {
+    .other-material-input {
+        width: 100%;
+        height: auto;
+    }
 }
 }
     `;
