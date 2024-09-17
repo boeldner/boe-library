@@ -29,9 +29,12 @@ function createStyleTag() {
       .fs-cc-prefs_title, .fs-cc-prefs_label{
       color: black;  
       } 
-      .other-material-input{
-      height: auto;
-      }
+@media screen and (max-width: 991px) {
+    .other-material-input {
+        width: 100%;
+        height: 0px;
+    }
+}
     `;
     const style = document.createElement('style');
     style.type = 'text/css';
