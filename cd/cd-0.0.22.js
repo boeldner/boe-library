@@ -7,6 +7,14 @@ function createStyleTag() {
         color: white;
       }
       
+      .div-block-89{
+      flex-direction: column;
+      }
+
+      .user-dashboard_empty-list{
+      inset: auto !important;
+      }
+      
       .fs-cc-banner_button.w-button:hover{
         background-color: white !important;
         border-radius: 12px;
