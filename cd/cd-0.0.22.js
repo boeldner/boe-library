@@ -38,7 +38,7 @@ function createStyleTag() {
     @media screen and (max-width: 990px) {
     .other-material-input {
         width: 100%;
-        height: auto;
+        height: 0px;
     }
 }
 }
