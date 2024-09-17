@@ -38,6 +38,13 @@ function createStyleTag() {
 
 createStyleTag();
 
+window.addEventListener('load', () => {
+    document.querySelectorAll('.input-wrapper').forEach(wrapper => {
+        wrapper.removeAttribute('data-input-error');
+    });
+});
+
+
 //Version 0.0.21
 // Code that runs before DOM is fully loaded
 const logger = {
