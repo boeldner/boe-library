@@ -28,7 +28,10 @@ function createStyleTag() {
       
       .fs-cc-prefs_title, .fs-cc-prefs_label{
       color: black;  
-      }         
+      } 
+      .other-material-input{
+      height: auto;
+      }
     `;
     const style = document.createElement('style');
     style.type = 'text/css';
