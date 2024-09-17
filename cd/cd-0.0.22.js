@@ -11,8 +11,8 @@ function createStyleTag() {
       flex-direction: column;
       }
 
-      .user-dashboard_empty-list{
-      inset: auto !important;
+      .user-dashboard_empty-list.dash{
+      position: static;
       }
       
       .fs-cc-banner_button.w-button:hover{
