@@ -1,7 +1,7 @@
 function createStyleTag() {
     const cssText = `
     .show{
-    transform: none;
+        transform: translate(0, 0%);
     }
     
     .fs-cc-banner_button.w-button, .fs-cc-prefs_button, .fs-cc-prefs_button.fs-cc-button-alt{
