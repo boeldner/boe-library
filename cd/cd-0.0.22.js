@@ -1,5 +1,9 @@
 function createStyleTag() {
     const cssText = `
+    .show{
+    transform: none;
+    }
+    
     .fs-cc-banner_button.w-button, .fs-cc-prefs_button, .fs-cc-prefs_button.fs-cc-button-alt{
         background-color: black !important;
         border-radius: 12px;
