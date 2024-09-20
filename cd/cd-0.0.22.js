@@ -1,5 +1,8 @@
 function createStyleTag() {
     const cssText = `
+    [data-collapse-checkbox="wrapper"]{
+      display:none
+    }
     .show{
         transform: translate(0, 0%);
     }
