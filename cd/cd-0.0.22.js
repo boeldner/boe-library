@@ -186,7 +186,22 @@ document.querySelectorAll('[data-date]').forEach(function(element) {
 
 }
 
-
+//form input highlights with CSS selectors -> .form-input_highlight input:required:invalid
+function addFormInputHighlight() {
+  // Loop through all forms on the page
+  document.querySelectorAll('form').forEach(function(form) {
+    // Find the submit button inside the form
+    const submitButton = form.querySelector('input[type="submit"], button[type="submit"]');
+    
+    // Add click event listener to the submit button
+    if (submitButton) {
+      submitButton.addEventListener('click', function() {
+        // Add the 'form-input_highlight' class to the form block when submit button is clicked
+        form.classList.add('form-input_highlight');
+      });
+    }
+  });
+}
 
 // ***** Lenis Smooth Scroll *****
 function loadLenisCDN(callback) {
