@@ -1,47 +1,5 @@
 function createStyleTag() {
     const cssText = `
-    
-    .show{
-        transform: translate(0, 0%);
-    }
-    
-    .fs-cc-banner_button.w-button, .fs-cc-prefs_button, .fs-cc-prefs_button.fs-cc-button-alt{
-        background-color: black !important;
-        border-radius: 12px;
-        border-color: black;
-        color: white;
-      }
-      
-      .div-block-89{
-      flex-direction: column;
-      }
-
-      .user-dashboard_empty-list.dash{
-      position: static;
-      }
-      
-      .fs-cc-banner_button.w-button:hover{
-        background-color: white !important;
-        border-radius: 12px;
-        border-color: black;
-        color: black;
-      }
-      
-      
-      
-      .fs-cc-banner_text-link{
-        color: black;
-        border-bottom: 2px solid black;
-      }
-      
-      .fs-cc-banner_text-link:hover{
-        color: grey;
-        border-bottom: 2px solid grey;
-      }
-      
-      .fs-cc-prefs_title, .fs-cc-prefs_label{
-      color: black;  
-      } 
     @media screen and (max-width: 1024px) {
         .other-material-input {
             width: 100%;
