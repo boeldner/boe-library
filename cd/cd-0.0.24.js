@@ -1,5 +1,9 @@
 function createStyleTag() {
     const cssText = `
+    .dropdown-list w-dropdown-list { 
+        inset: none !
+    }
+
     @media screen and (max-width: 1024px) {
         .other-material-input {
             width: 100%;
