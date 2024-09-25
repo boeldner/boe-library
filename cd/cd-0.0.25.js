@@ -148,32 +148,66 @@ document.querySelectorAll('[data-date]').forEach(function(element) {
 
 }
 
-//form input highlights with CSS selectors -> .form-input_highlight input:required:invalid
+//Function to add highlight to form inputs
 function addFormInputHighlight() {
-  // Loop through all forms on the page
-  document.querySelectorAll('form').forEach(function(form) {
-    // Find the submit button inside the form
-    const submitButton = form.querySelector('input[type="submit"], button[type="submit"]');
-    
-    // Add click event listener to the submit button
-    if (submitButton) {
-      submitButton.addEventListener('click', function() {
-        // Add the 'form-input_highlight' class to the form block when submit button is clicked
-        form.classList.add('form-input_highlight');
-      });
-    }
-
-    // Find buttons with data-highlight-required="button"
-    const highlightButtons = form.querySelectorAll('[data-highlight-required="button"]');
-    
-    // Add click event listener to these buttons
-    highlightButtons.forEach(function(button) {
-      button.addEventListener('click', function() {
-        form.classList.add('form-input_highlight');
-      });
+    // Loop through all forms on the page
+    document.querySelectorAll('form').forEach(function(form) {
+      // Check if the form has the 'data-highlight-required' attribute
+      if (form.hasAttribute('data-highlight-required')) {
+        // Find the submit button inside the form
+        const submitButton = form.querySelector('input[type="submit"], button[type="submit"]');
+  
+        // Add click event listener to the submit button
+        if (submitButton) {
+          submitButton.addEventListener('click', function() {
+            // Find the first invalid input
+            const firstInvalidInput = form.querySelector('input:required:invalid');
+  
+            if (firstInvalidInput) {
+              // Scroll to the first invalid input without preventing the default form submission
+              firstInvalidInput.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              // All fields are valid
+              form.classList.add('form-input_highlight');
+  
+              // Scroll to the element with 'data-highlight-required="finish"' if available
+              const finishElement = form.querySelector('[data-highlight-required="finish"]');
+              if (finishElement) {
+                finishElement.scrollIntoView({ behavior: 'smooth' });
+              }
+            }
+          });
+        }
+  
+        // Find buttons with 'data-highlight-required="button"'
+        const highlightButtons = form.querySelectorAll('[data-highlight-required="button"]');
+  
+        // Add click event listener to these buttons
+        highlightButtons.forEach(function(button) {
+          button.addEventListener('click', function() {
+            // Find the first invalid input
+            const firstInvalidInput = form.querySelector('input:required:invalid');
+  
+            if (firstInvalidInput) {
+              // Scroll to the first invalid input without preventing the default form submission
+              firstInvalidInput.scrollIntoView({ behavior: 'smooth' });
+            } else {
+              // All fields are valid
+              form.classList.add('form-input_highlight');
+  
+              // Scroll to the element with 'data-highlight-required="finish"' if available
+              const finishElement = form.querySelector('[data-highlight-required="finish"]');
+              if (finishElement) {
+                finishElement.scrollIntoView({ behavior: 'smooth' });
+              }
+            }
+          });
+        });
+      }
     });
-  });
-}
+  }
+  
+  
 
 
 // ***** Lenis Smooth Scroll *****
