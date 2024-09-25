@@ -162,8 +162,19 @@ function addFormInputHighlight() {
         form.classList.add('form-input_highlight');
       });
     }
+
+    // Find buttons with data-highlight-required="button"
+    const highlightButtons = form.querySelectorAll('[data-highlight-required="button"]');
+    
+    // Add click event listener to these buttons
+    highlightButtons.forEach(function(button) {
+      button.addEventListener('click', function() {
+        form.classList.add('form-input_highlight');
+      });
+    });
   });
 }
+
 
 // ***** Lenis Smooth Scroll *****
 function loadLenisCDN(callback) {
