@@ -34,6 +34,7 @@ window.addEventListener('load', () => {
 
 //select all instances data-tab="setDefault" and store in variable and adapt the above code. put the script from above into a function and refine it to accept the tab number as a parameter
 document.querySelectorAll('[data-tab="setDefault"]').forEach(function(tab) {
+    logger.log("setDefault tab for: ", tab);
     //collect the data-tab attribute value and store in variable tabNumber if setDefault is set to 1
     var tabNumber = tab.getAttribute('data-tab-setDefault');
     setDefaultTab(tab, tabNumber);
