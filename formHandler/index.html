@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Test Form with reCAPTCHA and Custom Script</title>
+  <!-- No need to include the reCAPTCHA script here; it will be loaded dynamically -->
+</head>
+<body>
+  <!-- Include your main script with the data-site-key attribute -->
+  <script src="your-script.js" data-site-key="YOUR_SITE_KEY"></script>
+
+  <!-- Form with the data-form-handler attribute -->
+  <form data-form-handler>
+    <!-- Form fields -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <br><br>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+    <br><br>
+
+    <!-- Submit button with data-wait attribute -->
+    <input type="submit" value="Submit" data-wait="Please wait...">
+  </form>
+
+  <!-- Success and Error Messages -->
+  <div class="w-form-done" style="display:none;">Thank you! Your submission has been received!</div>
+  <div class="w-form-fail" style="display:none;">Oops! Something went wrong while submitting the form.</div>
+</body>
+</html>

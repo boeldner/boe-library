@@ -1,12 +1,12 @@
 (function () {
+    // Get the site key from the script's data attribute
+    const scriptTag = document.currentScript;
+    const siteKey = scriptTag ? scriptTag.getAttribute('data-site-key') : null;
+  
     document.addEventListener('DOMContentLoaded', function () {
       console.log('DOM fully loaded and parsed. Initializing script...');
   
       try {
-        // Get the site key from the script's data attribute
-        const scriptTag = document.currentScript;
-        const siteKey = scriptTag.getAttribute('data-site-key');
-  
         if (!siteKey) {
           console.error('Site key not found in script data-site-key attribute.');
           return;
