@@ -179,5 +179,6 @@
         logDebug('No forms found with data-form-handler attribute.');
       }
     });
-  })();
+  })();  
+
   
